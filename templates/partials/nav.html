@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f54029;">
+    <div class='container-fluid'>
+        <!--offcanvas trigger -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+        >
+            <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+        </button>
+        <!-- offcanvas trigger -->
+        <a class="navbar-brand me-auto ms-lg-0 ms-3 fw-bold text-uppercase" href="#">management</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Xin chào {{request.user}}<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <div class="dropdown" >
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #f54029;">
+                        <i class="bi bi-person-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">User Profile</a></li>
+                        <li><a><hr class="dropdown-divider"></a></li>
+                        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>

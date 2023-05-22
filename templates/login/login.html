@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href ="{% static 'login.css' %}">
+    <link rel="shortcut icon" href="{% static '/img/icons8-apple-logo-200.png' %}" tyle="image/x-icon">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="login">
+            <form method="POST" action="">
+                {% csrf_token %}
+
+                <img class="profile-img" src="{% static '/img/icons8-myspace-200.png' %}" alt="">
+                <h3>Login</h3>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" name="username" placeholder="Username..." class="form-control">
+                    </div>
+                </div>
+
+                <div class="input-group mb-2">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        <input type="password" name="password" placeholder="Password..." class="form-control" >
+                    </div>
+                </div>
+
+                
+                <input type="submit" value="Login">
+                
+                {% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>

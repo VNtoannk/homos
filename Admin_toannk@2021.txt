@@ -1,0 +1,11 @@
+python manage.py migrate --database=auth_db
+python manage.py createsuperuser --database=auth_db
+
+user: dhkt1  Abcd@123
+huanhv Huan@123
+duclm1 Duc@1234
+tungnkx Tung@123
+dungnt Dung@123
+nghiapd Nghia@123
+hadasi Sihd@123
+
